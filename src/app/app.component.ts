@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 // import { ModalService } from './services/modal.service';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -15,4 +16,5 @@ export class AppComponent {
   //     console.log(this.modal.modals);
   //   }, 1000);
   // }
+  constructor(public auth: AuthService) {}
 }
