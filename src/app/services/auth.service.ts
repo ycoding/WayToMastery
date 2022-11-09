@@ -27,6 +27,7 @@ export class AuthService {
     this.usersCollection = db.collection('users');
     this.isAuthenticated$ = auth.user.pipe(map((user) => !!user));
     this.isAuthenticatedWithDelay$ = this.isAuthenticated$.pipe(delay(1000));
+
     this.router.events
       .pipe(
         filter((e) => e instanceof NavigationEnd),
